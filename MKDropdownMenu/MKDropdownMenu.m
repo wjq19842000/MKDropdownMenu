@@ -1067,6 +1067,14 @@ static const CGFloat kScrollViewBottomSpace = 5;
         customView = [self.delegate dropdownMenu:self viewForComponent:component];
     }
     
+    // WJQ start
+    BOOL isShowIndicator = YES;
+    if ([self.delegate respondsToSelector:@selector(dropdownMenu:isShowIndicatorForComponent:)]) {
+        isShowIndicator = [self.delegate dropdownMenu:self isShowIndicatorForComponent:component];
+    }
+    button.disclosureIndicatorView.hidden = !isShowIndicator;
+    // WJQ end
+    
     if (customView != nil) {
         
         [button setCustomView:customView];

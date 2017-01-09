@@ -184,8 +184,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// Return the attributed title for a selected header component.
 - (nullable NSAttributedString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForSelectedComponent:(NSInteger)component;
 
+// WJQ start
 /// Return the custom view for a header component.
-- (UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForComponent:(NSInteger)component;
+- (nullable UIView *)dropdownMenu:(MKDropdownMenu *)dropdownMenu viewForComponent:(NSInteger)component;
+// WJQ end
 
 /// Return the title for a row in a component.
 - (nullable NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForRow:(NSInteger)row forComponent:(NSInteger)component;
@@ -208,6 +210,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Return NO if the component is used as a dummy space for other components and should not be interacted with. The disclosure indicator is hidden for such components. Default = YES.
 - (BOOL)dropdownMenu:(MKDropdownMenu *)dropdownMenu enableComponent:(NSInteger)component;
 
+// WJQ start
+- (BOOL)dropdownMenu:(MKDropdownMenu *)dropdownMenu isShowIndicatorForComponent:(NSInteger)component;
+// WJQ end
 
 /// Called when a row was tapped. If selection needs to be handled, use `-(de)selectRow:inComponent:` as appropriate.
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component;

@@ -10,7 +10,7 @@ Dropdown Menu for iOS with many customizable parameters to suit any needs.
   s.screenshots      = "https://raw.github.com/maxkonovalov/MKDropdownMenu/master/Screenshots/MKDropdownMenu.png"
   s.license          = 'MIT'
   s.author           = "Max Konovalov"
-  s.source           = { :git => "https://github.com/maxkonovalov/MKDropdownMenu.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/wjq19842000/MKDropdownMenu.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
